@@ -1,5 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS citext;
-
 CREATE TABLE users (
   user_id     BIGSERIAL PRIMARY KEY,
   uuid        UUID        NOT NULL UNIQUE,

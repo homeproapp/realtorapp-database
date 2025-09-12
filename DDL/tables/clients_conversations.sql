@@ -11,6 +11,5 @@ CREATE TABLE clients_conversations (
   deleted_at             TIMESTAMPTZ
 );
 
-CREATE UNIQUE INDEX ux_cc_client_active
-  ON clients_conversations (client_id)
-  WHERE deleted_at IS NULL;
+CREATE INDEX ix_clients_conversations_client_id 
+ON clients_conversations(client_id);

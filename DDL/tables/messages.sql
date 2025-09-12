@@ -5,6 +5,7 @@ CREATE TABLE messages (
   sender_id        BIGINT NOT NULL
                    REFERENCES users(user_id) ON DELETE RESTRICT,
   message_text     TEXT NOT NULL,
+  is_read          BOOLEAN DEFAULT FALSE,
   created_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at       TIMESTAMPTZ NULL
