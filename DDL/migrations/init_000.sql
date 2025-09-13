@@ -24,7 +24,7 @@ SET ROLE :appuser;
 \ir ../tables/properties.sql
 \ir ../tables/clients_properties.sql
 \ir ../tables/conversations.sql
-\ir ../tables/clients_conversations.sql
+\ir ../tables/conversations_properties.sql
 
 \ir ../tables/file_types.sql
 \ir ../tables/files.sql
