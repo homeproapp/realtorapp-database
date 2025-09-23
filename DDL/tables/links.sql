@@ -4,6 +4,8 @@ CREATE TABLE links (
               REFERENCES tasks(task_id) ON DELETE RESTRICT,
   name        TEXT,
   url         TEXT,
+  is_referral BOOLEAN,
+  times_used  INT,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at  TIMESTAMPTZ

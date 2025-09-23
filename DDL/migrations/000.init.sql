@@ -39,6 +39,8 @@ SET ROLE :appuser;
 \ir ../tables/contact_attachments.sql
 
 \ir ../tables/files_tasks.sql
+\ir ../tables/task_titles.sql
+\ir ../tables/notifications.sql
 
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO :appuser;
