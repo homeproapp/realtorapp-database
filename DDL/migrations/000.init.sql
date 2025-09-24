@@ -20,6 +20,9 @@ SET ROLE :appuser;
 \ir ../tables/agents.sql
 \ir ../tables/clients.sql
 \ir ../tables/refresh_tokens.sql
+\ir ../tables/client_invitations.sql
+\ir ../tables/property_invitations.sql
+\ir ../tables/client_invitations_properties.sql
 \ir ../tables/third_party_contacts.sql
 
 \ir ../tables/properties.sql
