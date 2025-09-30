@@ -9,6 +9,29 @@ CREATE TABLE clients_properties (
   agent_id           BIGINT NOT NULL
                      REFERENCES agents(user_id)         
                      ON DELETE RESTRICT,
+  conversation_id    BIGINT NOT NULL
+                     REFERENCES conversations(conversation_id)
+                     ON DELETE RESTRICT,
+  external_id        TEXT,                         -- e.g., MLS number
+  external_source    TEXT,                         -- e.g., 'TREB', 'REBGV'
+  title              TEXT,
+  property_type      SMALLINT,                     -- e.g., 0=detached,1=semi,2=condo...
+
+  -- Property facts (optional)
+  bedrooms        SMALLINT,
+  bathrooms       SMALLINT,
+  square_feet     INTEGER,
+  year_built      SMALLINT,
+
+  -- Pricing (optional)
+  list_price      NUMERIC(12,2),
+  sale_price      NUMERIC(12,2),
+  currency_code   CHAR(3),                      -- ISO-4217, e.g., 'CAD','USD'
+
+  -- Timeline (optional)
+  listed_at       TIMESTAMPTZ,
+  closing_at      TIMESTAMPTZ,
+
   created_at         TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at         TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at         TIMESTAMPTZ

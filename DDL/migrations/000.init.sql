@@ -26,9 +26,8 @@ SET ROLE :appuser;
 \ir ../tables/third_party_contacts.sql
 
 \ir ../tables/properties.sql
-\ir ../tables/clients_properties.sql
 \ir ../tables/conversations.sql
-\ir ../tables/conversations_properties.sql
+\ir ../tables/clients_properties.sql
 
 \ir ../tables/file_types.sql
 \ir ../tables/files.sql
