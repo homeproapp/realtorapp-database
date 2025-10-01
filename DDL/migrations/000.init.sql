@@ -16,6 +16,9 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 CREATE EXTENSION IF NOT EXISTS citext;
 
 SET ROLE :appuser;
+\ir ../tables/file_types.sql
+\ir ../tables/files.sql
+
 \ir ../tables/users.sql
 \ir ../tables/agents.sql
 \ir ../tables/clients.sql
@@ -26,16 +29,16 @@ SET ROLE :appuser;
 \ir ../tables/third_party_contacts.sql
 
 \ir ../tables/properties.sql
+\ir ../tables/listings.sql
+\ir ../tables/clients_listings.sql
+\ir ../tables/agents_listings.sql
 \ir ../tables/conversations.sql
-\ir ../tables/clients_properties.sql
-
-\ir ../tables/file_types.sql
-\ir ../tables/files.sql
 
 \ir ../tables/tasks.sql
 \ir ../tables/links.sql
 
 \ir ../tables/messages.sql
+\ir ../tables/message_reads.sql
 \ir ../tables/attachments.sql
 \ir ../tables/task_attachments.sql
 \ir ../tables/contact_attachments.sql
