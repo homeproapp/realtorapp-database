@@ -11,4 +11,4 @@ CREATE TABLE messages (
 );
 
 CREATE INDEX ix_messages_conversation_created
-  ON messages (conversation_id, created_at);
+  ON messages (conversation_id, created_at);s
