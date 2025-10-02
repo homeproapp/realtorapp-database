@@ -1,11 +1,10 @@
 CREATE TABLE messages (
   message_id       BIGSERIAL PRIMARY KEY,
   conversation_id  BIGINT NOT NULL
-                   REFERENCES conversations(conversation_id) ON DELETE RESTRICT,
+                   REFERENCES conversations(listing_id) ON DELETE RESTRICT,
   sender_id        BIGINT NOT NULL
                    REFERENCES users(user_id) ON DELETE RESTRICT,
   message_text     TEXT NOT NULL,
-  is_read          BOOLEAN DEFAULT FALSE,
   created_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at       TIMESTAMPTZ NULL

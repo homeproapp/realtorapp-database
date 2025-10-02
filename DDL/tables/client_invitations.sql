@@ -6,11 +6,11 @@ CREATE TABLE client_invitations (
   client_phone         TEXT,
   invitation_token     UUID        NOT NULL UNIQUE DEFAULT gen_random_uuid(),
   invited_by           BIGINT      NOT NULL
-                       REFERENCES agents(agent_id) ON DELETE RESTRICT,
+                       REFERENCES agents(user_id) ON DELETE RESTRICT,
   expires_at           TIMESTAMPTZ NOT NULL,
   accepted_at          TIMESTAMPTZ,
   created_user_id      BIGINT
-                       REFERENCES users(user_id) ON DELETE RESTRICT,
+                       REFERENCES clients(user_id) ON DELETE RESTRICT,
   created_at           TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at           TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at           TIMESTAMPTZ

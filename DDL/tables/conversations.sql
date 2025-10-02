@@ -1,5 +1,5 @@
 CREATE TABLE conversations (
-  conversation_id BIGINT PRIMARY KEY
+  listing_id BIGINT PRIMARY KEY
                   REFERENCES listings(listing_id) ON DELETE RESTRICT,
   nickname        TEXT,
   image_id        BIGINT

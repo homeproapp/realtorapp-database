@@ -7,7 +7,7 @@ CREATE TABLE property_invitations (
   postal_code            TEXT        NOT NULL,
   country_code           CHAR(2)     NOT NULL,
   invited_by             BIGINT      NOT NULL
-                         REFERENCES agents(agent_id) ON DELETE RESTRICT,
+                         REFERENCES agents(user_id) ON DELETE RESTRICT,
   created_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at             TIMESTAMPTZ

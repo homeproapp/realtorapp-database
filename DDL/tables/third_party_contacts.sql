@@ -1,7 +1,7 @@
 CREATE TABLE third_party_contacts (
   third_party_contact_id BIGSERIAL PRIMARY KEY,
   agent_id   BIGINT NOT NULL
-             REFERENCES agents(agent_id) ON DELETE RESTRICT,
+             REFERENCES agents(user_id) ON DELETE RESTRICT,
   name       TEXT,
   email      TEXT,
   phone      TEXT,

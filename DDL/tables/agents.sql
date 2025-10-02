@@ -1,5 +1,5 @@
 CREATE TABLE agents (
-  agent_id           BIGINT PRIMARY KEY
+  user_id           BIGINT PRIMARY KEY
                     REFERENCES users(user_id) ON DELETE RESTRICT,
   brokerage         TEXT,
   brokerage_team    TEXT,

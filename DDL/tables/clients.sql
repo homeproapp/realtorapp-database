@@ -1,5 +1,5 @@
 CREATE TABLE clients (
-  client_id        BIGINT PRIMARY KEY
+  user_id        BIGINT PRIMARY KEY
                  REFERENCES users(user_id) ON DELETE RESTRICT,
   date_of_birth  TIMESTAMPTZ,
   marital_status TEXT,
