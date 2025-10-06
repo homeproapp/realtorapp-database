@@ -5,6 +5,7 @@ CREATE TABLE tasks (
   title          TEXT,
   room           TEXT,
   priority       SMALLINT,
+  description    TEXT,
   status         SMALLINT,
   follow_up_date TIMESTAMPTZ,
   estimated_cost INT,

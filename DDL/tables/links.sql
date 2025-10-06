@@ -2,9 +2,9 @@ CREATE TABLE links (
   link_id     BIGSERIAL PRIMARY KEY,
   task_id     BIGINT NOT NULL
               REFERENCES tasks(task_id) ON DELETE RESTRICT,
-  name        TEXT,
-  url         TEXT,
-  is_referral BOOLEAN,
+  name        TEXT NOT NULL,
+  url         TEXT NOT NULL,
+  is_referral BOOLEAN DEFAULT FALSE,
   times_used  INT,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
