@@ -1,8 +1,8 @@
 CREATE TABLE client_invitations (
   client_invitation_id BIGSERIAL PRIMARY KEY,
-  client_email         CITEXT      NOT NULL,
-  client_first_name    TEXT,
-  client_last_name     TEXT,
+  client_email         CITEXT NOT NULL,
+  client_first_name    TEXT NOT NULL,
+  client_last_name     TEXT NOT NULL,
   client_phone         TEXT,
   invitation_token     UUID        NOT NULL UNIQUE DEFAULT gen_random_uuid(),
   invited_by           BIGINT      NOT NULL
