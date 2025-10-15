@@ -2,8 +2,8 @@ CREATE TABLE users (
   user_id     BIGSERIAL PRIMARY KEY,
   uuid        UUID UNIQUE,
   email       CITEXT NOT NULL,
-  first_name  TEXT,
-  last_name   TEXT,
+  first_name  TEXT NOT NULL,
+  last_name   TEXT NOT NULL,
   phone       TEXT,
   profile_image_id    BIGINT
               REFERENCES files(file_id) ON DELETE SET NULL,
