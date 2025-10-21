@@ -8,6 +8,7 @@ CREATE TABLE property_invitations (
   country_code           CHAR(2)     NOT NULL,
   invited_by             BIGINT      NOT NULL
                          REFERENCES agents(user_id) ON DELETE RESTRICT,
+  created_listing_id     BIGINT REFERENCES listings(listing_id) ON DELETE RESTRICT,
   created_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
   deleted_at             TIMESTAMPTZ

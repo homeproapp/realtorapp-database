@@ -20,16 +20,17 @@ SET ROLE :appuser;
 \ir ../tables/files.sql
 
 \ir ../tables/users.sql
+\ir ../tables/teams.sql
 \ir ../tables/agents.sql
 \ir ../tables/clients.sql
 \ir ../tables/refresh_tokens.sql
 \ir ../tables/client_invitations.sql
-\ir ../tables/property_invitations.sql
-\ir ../tables/client_invitations_properties.sql
-\ir ../tables/third_party_contacts.sql
 
 \ir ../tables/properties.sql
 \ir ../tables/listings.sql
+\ir ../tables/property_invitations.sql
+\ir ../tables/client_invitations_properties.sql
+\ir ../tables/third_party_contacts.sql
 \ir ../tables/clients_listings.sql
 \ir ../tables/agents_listings.sql
 \ir ../tables/conversations.sql
