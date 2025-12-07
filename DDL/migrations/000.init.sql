@@ -25,7 +25,6 @@ SET ROLE :appuser;
 \ir ../tables/clients.sql
 \ir ../tables/refresh_tokens.sql
 \ir ../tables/client_invitations.sql
-\ir ../tables/reminders.sql
 
 \ir ../tables/properties.sql
 \ir ../tables/listings.sql
@@ -35,6 +34,7 @@ SET ROLE :appuser;
 \ir ../tables/clients_listings.sql
 \ir ../tables/agents_listings.sql
 \ir ../tables/conversations.sql
+\ir ../tables/reminders.sql
 
 \ir ../tables/tasks.sql
 \ir ../tables/links.sql

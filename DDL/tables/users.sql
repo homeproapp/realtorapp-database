@@ -1,6 +1,6 @@
 CREATE TABLE users (
   user_id     BIGSERIAL PRIMARY KEY,
-  uuid        UUID UNIQUE,
+  uuid        TEXT UNIQUE NOT NULL,
   email       CITEXT NOT NULL,
   first_name  TEXT NOT NULL,
   last_name   TEXT NOT NULL,
