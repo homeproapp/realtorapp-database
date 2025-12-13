@@ -4,8 +4,10 @@ SELECT format('CREATE ROLE %I LOGIN PASSWORD %L', :'appuser', :'apppass')
 WHERE NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = :'appuser')
 \gexec
 
+SELECT format('DROP DATABASE IF EXISTS %I', :'dbname')
+\gexec
+
 SELECT format('CREATE DATABASE %I OWNER %I', :'dbname', :'appuser')
-WHERE NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = :'dbname')
 \gexec
 
 \connect :dbname
