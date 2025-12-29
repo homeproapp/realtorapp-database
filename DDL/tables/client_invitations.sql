@@ -18,7 +18,7 @@ CREATE TABLE client_invitations (
 
 -- Enforce uniqueness of active invitations per email
 CREATE UNIQUE INDEX ux_client_invitations_email_active
-  ON client_invitations (client_email)
+  ON client_invitations (client_email, invited_by)
   WHERE deleted_at IS NULL AND accepted_at IS NULL;
 
 -- Index for efficient token lookups
