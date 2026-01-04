@@ -16,5 +16,5 @@ CREATE INDEX ix_refresh_tokens_token_hash
   ON refresh_tokens (token_hash)
   WHERE revoked_at IS NULL;
 
-CREATE INDEX ix_refresh_tokens_expires_at -- index for delete expired tokens job
+CREATE INDEX ix_refresh_tokens_expires_at
   ON refresh_tokens (expires_at);

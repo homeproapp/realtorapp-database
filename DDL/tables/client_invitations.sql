@@ -16,17 +16,14 @@ CREATE TABLE client_invitations (
   deleted_at           TIMESTAMPTZ
 );
 
--- Enforce uniqueness of active invitations per email
 CREATE UNIQUE INDEX ux_client_invitations_email_active
   ON client_invitations (client_email, invited_by)
   WHERE deleted_at IS NULL AND accepted_at IS NULL;
 
--- Index for efficient token lookups
 CREATE INDEX ix_client_invitations_token_active
   ON client_invitations (invitation_token)
   WHERE deleted_at IS NULL AND accepted_at IS NULL;
 
--- Index for expired invitation cleanup
 CREATE INDEX ix_client_invitations_expires_at
   ON client_invitations (expires_at)
   WHERE deleted_at IS NULL AND accepted_at IS NULL;

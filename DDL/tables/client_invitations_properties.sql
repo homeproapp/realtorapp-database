@@ -9,7 +9,6 @@ CREATE TABLE client_invitations_properties (
   deleted_at                    TIMESTAMPTZ
 );
 
--- Ensure unique client invitation-property combinations
 CREATE UNIQUE INDEX ux_client_invitations_properties_active
   ON client_invitations_properties (client_invitation_id, property_invitation_id)
   WHERE deleted_at IS NULL;

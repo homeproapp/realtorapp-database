@@ -12,7 +12,6 @@ CREATE TABLE users (
   deleted_at  TIMESTAMPTZ
 );
 
--- Enforce case-insensitive uniqueness only for active (non-deleted) users
 CREATE UNIQUE INDEX ux_users_email_active
   ON users (email)
   WHERE deleted_at IS NULL;

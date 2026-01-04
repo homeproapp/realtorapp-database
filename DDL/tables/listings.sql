@@ -3,23 +3,20 @@ CREATE TABLE listings (
   property_id        BIGINT NOT NULL
                      REFERENCES properties(property_id) 
                      ON DELETE RESTRICT,
-  external_id        TEXT,                         -- e.g., MLS number
+  external_id        TEXT, -- MLS or similar
   external_source    TEXT,
   title              TEXT,
-  property_type      SMALLINT,                     -- e.g., 0=detached,1=semi,2=condo...
+  property_type      SMALLINT, 
 
-  -- Property facts (optional)
   bedrooms        SMALLINT,
   bathrooms       SMALLINT,
   square_feet     INTEGER,
   year_built      SMALLINT,
 
-  -- Pricing (optional)
   list_price      NUMERIC(12,2),
   sale_price      NUMERIC(12,2),
-  currency_code   CHAR(3),                      -- ISO-4217, e.g., 'CAD','USD'
+  currency_code   CHAR(3),
 
-  -- Timeline (optional)
   listed_at       TIMESTAMPTZ,
   closed_at      TIMESTAMPTZ,
 
