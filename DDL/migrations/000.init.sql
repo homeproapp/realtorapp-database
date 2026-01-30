@@ -68,4 +68,5 @@ GRANT USAGE, SELECT, UPDATE ON SEQUENCES TO :appuser;
 INSERT INTO file_types (name) VALUES
   ('Avatar'),
   ('Image'),
-  ('Document');
+  ('Document'),
+  ('Audio');

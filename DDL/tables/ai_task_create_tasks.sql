@@ -11,3 +11,4 @@ CREATE TABLE ai_task_create_tasks (
 );
 
 CREATE INDEX ix_ai_task_create_tasks_job_id ON ai_task_create_tasks(ai_task_create_job_id);
+CREATE UNIQUE INDEX ux_ai_task_create_tasks_task_id ON ai_task_create_tasks(task_id);

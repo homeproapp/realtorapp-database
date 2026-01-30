@@ -4,6 +4,7 @@ CREATE TABLE device_tokens (
                    REFERENCES users(user_id) ON DELETE RESTRICT,
   token            TEXT NOT NULL,
   device_type      SMALLINT NOT NULL,
+  device_id        TEXT NOT NULL,
   is_enabled       BOOLEAN NOT NULL DEFAULT TRUE,
   created_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
