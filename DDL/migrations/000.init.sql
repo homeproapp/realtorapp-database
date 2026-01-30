@@ -52,6 +52,13 @@ SET ROLE :appuser;
 \ir ../tables/notifications.sql
 
 \ir ../tables/teammate_invitations.sql
+\ir ../tables/device_tokens.sql
+\ir ../tables/user_preferences.sql
+\ir ../tables/user_prompts.sql
+
+\ir ../tables/ai_task_create_jobs.sql
+\ir ../tables/ai_task_create_files.sql
+\ir ../tables/ai_task_create_tasks.sql
 
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO :appuser;
